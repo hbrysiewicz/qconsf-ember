@@ -1,394 +1,989 @@
 <!doctype html>
 <html lang="en">
+<head>
+	<meta charset="utf-8">
 
-	<head>
-		<meta charset="utf-8">
+	<title>Ember.js - Enterprise Application Framework</title>
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+	<meta name="description" content="From empty git-repo to full-blown battleship, just add water.">
+	<meta name="author" content="Heather A Brysiewicz">
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/ember.css" id="theme">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.hbs.css">
+	<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Custom Styling -->
+	<link rel="stylesheet" href="css/custom.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+	<script>
+		if( window.location.search.match( /print-pdf/gi ) ) {
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = 'css/print/pdf.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		}
+	</script>
 
-	<body>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
 
-		<div class="reveal">
+<body>
+	<div class="reveal">
+		<div class="slides">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+			<!-- Introduction and of Myself -->
+			<section>
+				<h1>Ember.js</h1>
+				<h3>Enterprise Application Framework</h3>
+				<p>
+					<small><a href="http://hbrysiewicz.github.io">Heather Brysiewicz</a> / <a href="http://twitter.com/caligoanimus">@caligoanimus</a></small>
+				</p>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+				<aside class='notes'>
+					I'm here to talk to you about Ember.js, a client side framework
+				</aside>
+			</section>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+			<section>
+				<img src='img/baby-programmer.jpg' width=600>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+				<aside class='notes'>
+					I have been programming for most of my life. I have interests all over the technology space, but my career has always focussed around the web and its ever changing technologies.
+				</aside>
+			</section>
+
+			<section>
+				<img src='img/tomster-under-construction.png'>
+
+				<aside class='notes'>
+					I have been working with Ember for over 2 years. My first application could easily be described as frustrating. <br>
+					The resources were limited and the community was quite small. <br>
+					I was patient and the more I learned the easier it got.<br>
+					I have my own web consulting firm, we specialize in ember applications.
+				</aside>
+			</section>
+
+			<section>
+				<img src='img/sandiegojs-840x200.png'>
+
+				<aside class='notes'>
+					Organizer for sandiego.js I see a lot of members choosing ember and they are able to grasp the core concepts and fully recognize the benefits much easier<br>
+					because the resources and community that has grown so much ember.
+				</aside>
+			</section>
+
+			<section>
+				<img src='img/community.png'>
+
+				<aside class='notes'>
+					This is thanks to the individuals and companies that have adopted and contributed to the success of the framework.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Who is using Ember.js?</h4>
+				<p>
+					<a href='http://emberjs.com/ember-users/'>
+						<img src='img/ember-users.png' height=600><br>
+						emberjs.com/ember-users
+					</a>
+				</p>
+			</section>
+
+			<section>
+				<h4>Who is using Ember.js?</h4>
+				<p>
+					<a href='http://builtwithember.io'>
+						<img src='img/builtwithember.png' height=600><br>
+						builtwithember.io
+					</a>
+				</p>
+
+				<aside class='notes'>
+					built with ember is another resource that highlights websites that are public facing and built with ember.
+<br>
+				</aside>
+			</section>
+
+			<section>
+				<p>
+					<img src='img/qualcomm.svg.png' height=100>
+					<img src='img/yahoo.png' height=100>
+				</p>
+				<p>
+					<img src='img/netflix-logo.png' height=100>
+					<img src='img/groupon_logo.svg.png' height=100>
+					<img src='img/livenation.png' height=100>
+				</p>
+				<p>
+					<img src='img/apple-logo.png' height=100>
+					<img src='img/mgh.jpg' height=100>
+				</p><br>
+				<p>
+					<img src='img/heroku.png' height=100>
+					<img src='img/digitalocean.png' height=100>
+					<img src='img/square.png' height=100>
+				</p>
+				<p>
+					<img src='img/nbc-news-logo.png' height=100>
+					<img src='img/vine.png' height=100>
+				</p>
+				<aside class='notes'>
+					You'll see up here some fortune 500 and some other recognizable company names that are using Ember. <br>
+					Qualcomm just recently relaunched their entire public facing website along with the help of digital agency Digitaria. <br>
+				</aside>
+			</section>
+
+			<section>
+				<h4> So Why do these companies chose Ember.js? </h4>
+				<p>
+					App grows, complexity doesn't<br>
+					<small>
+						<a href='http://slides.com/sjmueller/ember-yahoo'>
+							Sam Mueller, Yahoo Ad-Manager Plus
 						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+					</small>
+				</p>
+ 				<p>
+ 					Ember has the ability to manage the complexity of large applications and websites with grace<br>
+ 					<small>
+ 						<a href='http://www.digitaria.com/news/blogs/7-fun-facts-about-re-launching-qualcommcom'>
+ 							Jackie Hade, from Digitaria on Qualcomm
+ 						</a>
+ 					</small>
+ 				</p>
+ 				<p>
+ 					The fact that Ember is so opinionated... any Ember developer can look at any other Ember application and immediately have a huge benefit<br>
+ 					<small>
+ 						<a href='http://youtu.be/4ixw_5keMTc?t=24m30s'>
+ 							Lance Harper, NBCNews
+ 						</a>
+ 					</small>
+ 				</p>
+ 			<!-- 	<p class='fragment'>
+ 					Ember makes coordinating data across multiple views and embedded model objects scarily easy<br>
+ 					<small>
+ 						<a href='http://corner.squareup.com/2012/04/building-analytics.html'>
+ 							Allen Cheung, Square
+ 						</a>
+ 					</small>
+ 				</p> -->
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
+ 				<aside class='notes'>
+ 					When tasked with building a robust, powerful, and ambitious web applicaiton, Ember is the tool for that job.<br>
+ 					These are some quotes from some of the companies I showed before on why they chose ember.<br>
+ 					You'll see some common themes when reading these quotes or information online  about why individuals or companies choose Ember<br>
+ 				</aside>
+ 			</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+ 			<section>
+ 				<h4>It Grows!</h4>
+ 				<img src='img/groot.gif'>
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+ 				<aside class='notes'>
+ 					One of those is that it grows really well. Ember boasts being developed for ambitious apps. It stays easy to manage and navigate a project as it grows in size.<br>
+ 				</aside>
+			</section>
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+ 			<section>
+ 				<h4>Opinionated = Performance + Productivity</h4>
+ 				<img src='img/cheetah.gif' width=800>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+ 				<aside class='notes'>
+ 					Another is that ember is opinionated.<br>
+ 					Convention over configuration<br>
+ 					This means that it is able to take care of common tasks the correct and performant way, enabling the developer to be more productive. It also means that picking up a new ember app takes minutes of knowledge transfer, not days!
+ 				</aside>
+			</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+			<section>
+				<h4>Evolution: Rise from the Ashes</h4>
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+				<p>Where did we come from?</p>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+				<aside class='notes'>
+					Ember didn't come out of nowhere boasting some serious muscle. There has been a long line of front-end web technologies that have led up to the modern day client-side solutions, like Ember. It has improved on the solutions built before it, and exceeded them.
+				</aside>
+			</section>
 
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+			<section>
+				<div class='evo-top'>
+					<img src='img/evolution-1.png'>
+				</div>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
+				<p>Ajax</p>
+				<p>DOM Selection and Traversing</p>
+				<p>Events, Effects, and Animations</p>
+				<p>Extensible</p>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
+				<aside class='notes'>
+					I was working a web dev position when jQuery came up on my radar. The ease of making ajax calls was enough for me to incorperate it immediately.<br>
+					The dom selection engine made manipulating the dom much easier and more shorthand, with chaining and traversing. <br>
+					Never been a fan of jquery plugins as they far too often incur performance problems, but jquery also bosted being 'highly extensible'<br>
+					Soon the entire application had nearly been rewritten with much more of the logic being moved to the client from the server. Just as fast, this code became difficult to manage, or even find scattered throughout the proejct, as was the case with many a jquery project.<br>
+				</aside>
+			</section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
+			<section>
+				<div class='evo-top'>
+					<img src='img/evolution-2.png'>
+				</div>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+				<p>Lean MVC</p>
+				<p>Small Footprint</p>
+				<p>Easy to Learn</p>
+				<p>Provides Basic Tools</p>
 
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
+				<aside class='notes'>
+					The next big leap was Backbone and it improved the quality of life for many front-end developers.<br>
+					jquery or other selector engine dependency<br>
+					It offered a lean approach to MVC with a minimal learning curve, only a few core concepts to master.<br>
+					A lot of boilerplate that had to be handled by the developer.<br>
+					No structure. Memory management is a serious consideration for backbone developers, view lifecycle must be well managed or memory leaks are all too easy.<br>
+					Provides basic toolset for building an application or custom framework. Is not a framework.
+				</aside>
+			</section>
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
+			<section>
+				<div class='evo-top'>
+					<img src='img/evolution-3.png'>
+				</div>
 
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
+				<p>Two-Way Binding</p>
+				<p>Manages View Life-Cycle</p>
+				<p>Automatic Creation</p>
+				<p>Router</p>
+				<p>Ember-Data</p>
+				<p>Performance</p>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+				<aside class='notes'>
+					Two-Way binding in today's generation of client-side tech has really simplified templates and leaned down a lot of logic that had to be done prior to update views.<br>
+					Setup and teardown of views<br>
+					Automatically create Routes, Controllers and Views even if you haven't defined them yourself. <br>
+					Ember-Data is an optional model layer that provides a way to interact with data on your server, cache them for performance and can be used without much configuration for most projects<br>
+					Because Ember is so particular, it makes good app management decisions so you don't have to. Optimizes updates to the DOM when data change, Caching of computed properties, only recalculates when necessary.
+				</aside>
+			</section>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+			<section>
+				<h4>It's a Framework</h4>
+				<div class='framework-left'>
+					<div class='framework-models framework fragment'>Models* <span class='bonus'></span></div>
+					<div class='framework-router framework fragment'>Router</div>
+					<div class='framework-controllers framework fragment'>Controllers</div>
+					<div class='framework-views framework fragment'>Views & Components</div>
+					<div class='framework-templates framework fragment'>Templates</div>
+				</div>
+				<aside class='notes'>
+					Ember is very much a framework <br>
+					models: optional layer. represent your data returned from server, ember-data provides ways for managing and loading the data<br>
+					router: url, handles error/loading states, retrievs data & pushes to controller, hierarchical<br>
+					controller: decorating the data, business logic and event handling<br>
+					views/comps: responsible for dom interaction, responding to user events. comps are isolated views<br>
+					templates: handlebars, much like html but provide helpers for displaying or iterating over data, responding to user actions.
+				</aside>
+			</section>
 
-    var nodes = document.querySelectorAll( selector );
+			<section>
+				<h4>Ember-CLI</h4>
+				<p><img src='img/ember-new-sample-app.png'></p>
+				<aside class='notes'>
+					I'm going to walk through an example application that will cover these core pieces. It is important to note that this will be done from the context of Ember-CLI.<br>
+					Command line tool that provides the boiler plate, blue prints, and build tools needed to get an ember app up-and-running in minutes. <br>
+					Ember-CLI allows you to write the application code in es6 module syntax<br>
+					Getting started with ember-cli is as easy as this one line of code you see here.
+			</section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+			<section>
+				<p><img src='img/ember-new-sample-app-full.png' height=700></p>
 
-      if( !node.className ) {
-        node.className += ' roll';
+				<aside class='notes'>
+					After hitting enter you'll see ember-cli build out some required files and the enforced project structure with be stubbed out for you under the app/ directory.<br>
+					It will even build out the project with the testing structure and dependencies<br>
+					The last steps will be to install bower and npm dependencies, and finally to initialize a new git repository. <br>
+				</aside>
+			</section>
+
+			<!-- Make a public Imgur -->
+			<section>
+				<h4>Imgur Example</h4>
+				<img src='img/app-screenshot.png'>
+
+				<aside class='notes'>
+					Using the commonly known web application, Imgur, as an example to demonstrate the core concepts of Ember.<br>
+					I'm going to work in from the visual concepts to the more internal concepts for the different pieces.
+				</aside>
+			</section>
+
+			<section>
+				<ul class='conventions'>
+					<li class='conventions-item'>
+						<div class='conventions-label'>URL</div>
+						<div class='conventions-value'>/</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Template Path</div>
+						<div class='conventions-value'>app/templates/application.hbs</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>View Path</div>
+						<div class='conventions-value'>app/views/application.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Controller Path</div>
+						<div class='conventions-value'>app/controllers/application.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Route Path</div>
+						<div class='conventions-value'>app/routes/application.js</div>
+						<div class='clear'></div>
+					</li>
+				</ul>
+				<img src='img/app-view.png'>
+
+				<aside class='notes'>
+					Lets take a look at the appication from a visual perspective first to get an idea of the different pieces that will be created.<br>
+					This is the landing page, so we are at the root of the application.<br>
+					Ember is going to look for these files to be defined for any custom logic or UI needed for the application view. For this example, I have a header that I want to persist no matter where I am in the application, so this will be put in the template for application.
+				</aside>
+			</section>
+
+			<section>
+				<ul class='conventions'>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>URL</div>
+						<div class='conventions-value'>/</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item highlighted'>
+						<div class='conventions-label'>Template Path</div>
+						<div class='conventions-value'>app/templates/application.hbs</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>View Path</div>
+						<div class='conventions-value'>app/views/application.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>Controller Path</div>
+						<div class='conventions-value'>app/controllers/application.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>Route Path</div>
+						<div class='conventions-value'>app/routes/application.js</div>
+						<div class='clear'></div>
+					</li>
+				</ul>
+
+				<img src='img/app-view.png'>
+
+				<aside class='notes'>
+					The default ember behavior for the view and controller is enough for our example, so we won't need to write any code for that. Ember will build out a working application view and controller with default behavior for us. We only need to write the application template, and that is only because we have a header that persists throughout the entire application.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Application Template</h4>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/application.hbs
+				</p>
+
+<pre><code data-trim class='hbs'>
+<header>
+  {{#link-to 'index'}}
+    <i class='fa fa-circle fa-emgur-logo'></i>
+    Emgur
+  {{/link-to}}
+</header>
+
+<div class='main-container'>
+  {{outlet}}
+</div>
+</code></pre>
+
+				<aside class='notes'>
+					Here is what our application template file looks like. Any time the route changes, the template will be rendered inside the outlet tag.
+				</aside>
+			</section>
+
+			<section>
+				<ul class='conventions'>
+					<li class='conventions-item'>
+						<div class='conventions-label'>URL</div>
+						<div class='conventions-value'>/</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Template Path</div>
+						<div class='conventions-value'>app/templates/index.hbs</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>View Path</div>
+						<div class='conventions-value'>app/views/index.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Controller Path</div>
+						<div class='conventions-value'>app/controllers/index.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Route Path</div>
+						<div class='conventions-value'>app/routes/index.js</div>
+						<div class='clear'></div>
+					</li>
+				</ul>
+				<img src='img/index-view.png'>
+
+				<aside class='notes'>
+					By default, index is the route that is run when the url is at the root.
+				</aside>
+			</section>
+
+			<section>
+				<ul class='conventions'>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>URL</div>
+						<div class='conventions-value'>/</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item highlighted'>
+						<div class='conventions-label'>Template Path</div>
+						<div class='conventions-value'>app/templates/index.hbs</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>View Path</div>
+						<div class='conventions-value'>app/views/index.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>Controller Path</div>
+						<div class='conventions-value'>app/controllers/index.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item highlighted'>
+						<div class='conventions-label'>Route Path</div>
+						<div class='conventions-value'>app/routes/index.js</div>
+						<div class='clear'></div>
+					</li>
+				</ul>
+				<img src='img/index-view.png'>
+
+				<aside class='notes'>
+					For the index, we will need a custom template where we loop through each gallery item. Add some styling in there as well. <br>
+					We are also going to need to grab the content for the index route, in this case, the array of gallery items to display.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Index Route</h4>
+				<p class='file-location router'>
+					<i class="fa fa-folder-open"></i>
+					app/routes/index.js
+				</p>
+<pre><code data-trim>
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  model: function() {
+    return this.store.find('gallery');
+  }
+});
+</code></pre>
+				<aside class='notes'>
+					this.store gives access to the data store.<br>
+					model is a special hook on the route that provides the main content to the controller. this.store.find returns a promise and Ember will wait for that promise to resolve before rendering the template.
+				</aside>
+			</section>
+
+			<section>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/index.hbs
+				</p>
+
+<pre><code data-trim class='hbs'>
+<div class='container'>
+  {{#each}}
+    {{image-thumb content=this}}
+  {{/each}}
+  <div class='clear'></div>
+</div>
+</code></pre>
+
+				<aside class='notes'>
+					each default behavior is to loop over the content provided in the route. <br>
+					image-thumb is a component that will display the thumbnail, manage the hover state, and show the comments count.
+				</aside>
+			</section>
+
+			<section>
+				<ul class='conventions'>
+					<li class='conventions-item highlighted'>
+						<div class='conventions-label'>Template Path</div>
+						<div class='conventions-value'>app/templates/components/image-thumb.hbs</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item highlighted'>
+						<div class='conventions-label'>Component Path</div>
+						<div class='conventions-value'>app/components/image-thumb.js</div>
+						<div class='clear'></div>
+					</li>
+				</ul>
+				<img src='img/image-thumb-component.png'>
+
+				<aside class='notes'>
+					components are a special kind of view that is completely isolated. any data you want it to have access to must be passed into it, this also works with bound elements.
+				</aside>
+			</section>
+
+			<section>
+				<img src='img/image-thumb-ui.gif'>
+				<p> :isHovering </p>
+				<p> commentCount </p>
+
+				<aside class='notes'>
+					here is a demo of how the interaction is going to work. basically we want the gradient and comment count to show up when we hover, along with the border. The border we do with css, simple :hover selector.<br>
+					The content for the count we'll use a flag on the component. <br>
+					Also, the comments for a given gallery item will have to be totalled. This isn't on the data model so this will have to be an attribute on the component.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Image Thumbnail Component</h4>
+				<p class='file-location views'>
+					<i class="fa fa-folder-open"></i>
+					app/components/image-thumb.js
+				</p>
+
+<pre><code data-trim>
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  isHovering: false,
+
+  commentsCount: function() {
+    return this.get('content.comments.length');
+  }.property('content.comments'),
+
+  mouseEnter: function() {
+    this.set('isHovering', true);
+  },
+
+  mouseLeave: function() {
+    this.set('isHovering', false);
+  }
+});
+</code></pre>
+
+				<aside class='notes'>
+					pretty simple component but it gives you an idea of a component. `content` is passed in and we get the comment count by grabbing the length of the comments array. <br>
+					the isHovering toggles when the mouseOver and mouseLeave events fire.<br>
+					components, like views, are evented and implement touch, drag/drop, mouse, key and form events. Custom events can also be registered.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Image Thumbnail Template</h4>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/components/image-thumb.hbs
+				</p>
+
+<pre><code data-trim class='hbs'>
+{{#link-to 'gallery' content}}
+  <div class='image-item'>
+    <div class='image-thumb'>
+      &lt;img {{bind-attr src=content.image.url}}&gt;
+    </div>
+    {{#if isHovering}}
+      <div class='image-details'>
+        <div class='image-comment'>
+          <div class='comment-count'>{{commentsCount}} comments</div>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+{{/link-to}}
+</code></pre>
+
+				<aside class='notes'>
+					here we can see the isHovering flag at work in the handlebars template.<br>
+					we can also see the `bind-attr` handlebars helper. this comes in handy with images, or other attributes you may want to bind like height, width, or even data-attrbutes you may be using for interactions with other libraries.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Adding Routes</h4>
+				<img src='img/link-to-gallery.png'>
+
+				<aside class='notes'>
+					I wrapped the entire image thumb component in a link-to so that when it was clicked, the individual gallery view would display that item's specific content.<br>
+				</aside>
+			</section>
+
+			<!-- Router -->
+			<section>
+				<h4>Define Routes</h4>
+				<p class='file-location router'>
+					<i class="fa fa-folder-open"></i>
+					app/router.js
+				</p>
+
+<pre><code data-trim>
+import Ember from 'ember';
+import config from './config/environment';
+
+var Router = Ember.Router.extend({
+  location: config.locationType
+});
+
+Router.map(function() {
+  this.route('gallery', { path: '/gallery/:gallery_id' });
+});
+
+export default Router;
+</code></pre>
+
+				<aside class='notes'>
+					We don't need to define the main index or app route, ember will do that for us as we saw before.<br>
+					If we name the parameters with the model name and follow it with the `_id` we won't need to write these routes. The default behavior for the route will be to look up the model, in this case `gallery` and do a find with the passed in id number.
+				</aside>
+			</section>
+
+			<section>
+				<ul class='conventions'>
+					<li class='conventions-item'>
+						<div class='conventions-label'>URL</div>
+						<div class='conventions-value'>/gallery/:gallery_id</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Template Path</div>
+						<div class='conventions-value'>app/templates/gallery.hbs</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>View Path</div>
+						<div class='conventions-value'>app/views/gallery.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Controller Path</div>
+						<div class='conventions-value'>app/controllers/gallery.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item'>
+						<div class='conventions-label'>Route Path</div>
+						<div class='conventions-value'>app/routes/gallery.js</div>
+						<div class='clear'></div>
+					</li>
+				</ul>
+				<img src='img/gallery-1.png' height=600>
+
+				<aside class='notes'>
+					This route content will replace the index content inside of that {{outlet}} tag. <br>
+				</aside>
+			</section>
+
+			<section>
+				<ul class='conventions'>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>URL</div>
+						<div class='conventions-value'>/gallery/:gallery_id</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item highlighted'>
+						<div class='conventions-label'>Template Path</div>
+						<div class='conventions-value'>app/templates/gallery.hbs</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>View Path</div>
+						<div class='conventions-value'>app/views/gallery.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item highlighted'>
+						<div class='conventions-label'>Controller Path</div>
+						<div class='conventions-value'>app/controllers/gallery.js</div>
+						<div class='clear'></div>
+					</li>
+					<li class='conventions-item faded'>
+						<div class='conventions-label'>Route Path</div>
+						<div class='conventions-value'>app/routes/gallery.js</div>
+						<div class='clear'></div>
+					</li>
+				</ul>
+				<img src='img/gallery-1.png' height=600>
+
+				<aside class='notes'>
+					The route default behavior as we mentioned will be enough for us, since we are taking advantage of the expected naming convention for our id parameter. <br>
+					The only other thing we will need is the template file that will handle the display of the title and image, as well as the comments. <br>
+					Most of what is in the template should be easy to figure out, but the new stuff would be actions. We want to be able to add a new comment.
+				</aside>
+			</section>
+
+			<section>
+				<img src='img/comment.gif'>
+			</section>
+
+			<section>
+				<h4>Gallery Item Template</h4>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/gallery.hbs
+				</p>
+
+<pre><code data-trim class='hbs'>
+<div class='gallery-container'>
+  <div class='gallery-full'>
+    <div class='gallery-title'>{{title}}</div>
+    <div class='gallery-posted'>{{postedFormated}}</div>
+    <div class='gallery-image'>
+      &lt;img {{bind-attr src=image.url}}&gt;
+    </div>
+  </div>
+
+  <div class='gallery-comments'>
+    <div class='comment-new'>
+      {{#if isEditing}}
+        {{focus-textarea value=newComment rows=3 focus-out='offEdit' action='submitComment'}}
+        <div class='comment-button-container'>
+          &lt;div class='save-button' {{action 'submitComment'}}&gt;save&lt;/div&gt;
+          <div class='comment-length'>{{newCommentCharacters}}</div>
+        </div>
+        <div class='clear'></div>
+      {{else}}
+        {{input placeholder='Submit a comment' focus-in='onEdit'}}
+      {{/if}}
+    </div>
+    <ul class='gallery-comments-ul'>
+      {{#each comments}}
+        <li class='gallery-comment'>
+          <div class='comment-posted'>{{postedFormatted}}</div>
+          <div class='comment-content'>{{content}}</div>
+        </li>
+      {{/each}}
+  </div>
+</div>
+
+<!-- TODO -->
+<div class='gallery-navigation'></div>
+
+</code></pre>
+
+				<aside class='notes'>
+					This template has a bit more going on since there is more interaction available between the user and the application. I'm going to step through the unfamiliar pieces.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Gallery Item Template</h4>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/gallery.hbs
+				</p>
+
+				<img src='img/bind-attr.png'>
+
+				<aside class='notes'>
+					bind-attr is a handlebars helper that allows for ember objects to be bound to a dom element attribute. in this example, the src for an image.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Gallery Item Template</h4>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/gallery.hbs
+				</p>
+
+				<img src='img/focus-textarea.png'>
+
+				<aside class='notes'>
+					focus-textarea is another component that extends the default ember textarea. this component has quite a few more attributes than the one prior and even has some actions being defined.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Gallery Item Template</h4>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/gallery.hbs
+				</p>
+
+				<img src='img/action.png'>
+
+				<aside class='notes'>
+					action is another handlebars helper that triggers an event. these actions bubble up until the action is found.
+				</aside>
+			</section>
+
+			<section>
+				<h4>Gallery Item Template</h4>
+				<p class='file-location templates'>
+					<i class="fa fa-folder-open"></i>
+					app/templates/gallery.hbs
+				</p>
+
+				<img src='img/each.png'>
+
+				<aside class='notes'>
+					loop over each comment
+				</aside>
+			</section>
+
+			<section>
+				<h4>Gallery Item Controller</h4>
+				<p class='file-location controllers'>
+					<i class="fa fa-folder-open"></i>
+					app/controllers/gallery.js
+				</p>
+
+<pre><code data-trim>
+import Ember from 'ember';
+
+export default Ember.ObjectController.extend({
+  maxChars: 140,
+  isEditing: false,
+  newComment: null, // bound to value of textarea
+
+  postedFormated: function() {
+    return moment(this.get('posted')).fromNow();
+  }.property('posted'),
+
+  newCommentCharacters: function() {
+    return this.maxChars - this.get('newComment.length');
+  }.property('newComment'),
+
+  actions: {
+    onEdit: function() {
+      this.set('isEditing', true);
+    },
+
+    offEdit: function() {
+      if (this.get('newCommentCharacters') === this.maxChars) {
+        this.set('isEditing', false);
       }
+    },
+
+    submitComment: function() {
+      var _this = this;
+
+      var comment = this.store.createRecord('comment', {
+        content: this.get('newComment')
+      });
+
+      comment.save().then(function(comment) {
+        var gallery = _this.get('content');
+        gallery.get('comments').pushObject(comment);
+
+        gallery.save().then(function(gallery) {
+          _this.setProperties({
+            newComment: null,
+            isEditing: false
+          });
+        });
+      });
     }
   }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+});
+</code></pre>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+				<aside class='notes'>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+				</aside>
+			</section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+			<section>
+				<h4>That's all you need to get started with</h4>
+				<img src='img/emberjs.png'>
+			</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+			<section>
+				<h4>Get Involved!</h4>
+				<img src='img/meetup.png'>
+				<p><a href='http://emberjs.com/community/'>Community</a></p>
+				<p><a href='http://discuss.emberjs.com/'>
+					<img src='img/discuss.png'>
+				</a></p>
+				<p>#emberjs</p>
+			</section>
+
+			<section>
+				<h4>Thanks!</h4><br>
+				<p>
+					<i class='fa fa-github'></i>
+					<a href='http://hbrysiewicz.github.io/'>hbrysiewicz.github.io</a>
+				</p>
+				<p>
+					<i class='fa fa-twitter'></i>
+					<a href='http://twitter.com/caligoanimus/'>@caligoanimus</a>
+				</p><br>
+				<p>
+					<a href='http://sandiegojs.org'>
+						<img src='img/sandiegojs-210x50.png'>
 					</a>
-				</section>
+				</p>
+			</section>
+	</div>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+	<script>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-			</div>
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
 
-		</div>
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+	</script>
 
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+</body>
 </html>

@@ -1,0 +1,119 @@
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #3f3f3f;
+  color: #dcdcdc;
+  -webkit-text-size-adjust: none;
+}
+
+pre .hljs-keyword,
+pre .hljs-tag,
+pre .css .hljs-class,
+pre .css .hljs-id,
+pre .lisp .hljs-title,
+pre .nginx .hljs-title,
+pre .hljs-request,
+pre .hljs-status,
+pre .clojure .hljs-attribute {
+  color: #e3ceab;
+}
+
+pre .django .hljs-template_tag,
+pre .django .hljs-variable,
+pre .django .hljs-filter .hljs-argument {
+  color: #dcdcdc;
+}
+
+pre .hljs-number,
+pre .hljs-date {
+  color: #8cd0d3;
+}
+
+pre .dos .hljs-envvar,
+pre .dos .hljs-stream,
+pre .hljs-variable,
+pre .apache .hljs-sqbracket {
+  color: #efdcbc;
+}
+
+pre .dos .hljs-flow,
+pre .diff .hljs-change,
+pre .python .exception,
+pre .python .hljs-built_in,
+pre .hljs-literal,
+pre .tex .hljs-special {
+  color: #efefaf;
+}
+
+pre .diff .hljs-chunk,
+pre .hljs-subst {
+  color: #8f8f8f;
+}
+
+pre .dos .hljs-keyword,
+pre .hljs-decorator,
+pre .hljs-title,
+pre .hljs-type,
+pre .diff .hljs-header,
+pre .ruby .hljs-class .hljs-parent,
+pre .apache .hljs-tag,
+pre .nginx .hljs-built_in,
+pre .tex .hljs-command,
+pre .hljs-prompt {
+  color: #efef8f;
+}
+
+pre .dos .hljs-winutils,
+pre .ruby .hljs-symbol,
+pre .ruby .hljs-symbol .hljs-string,
+pre .ruby .hljs-string {
+  color: #dca3a3;
+}
+
+pre .diff .hljs-deletion,
+pre .hljs-string,
+pre .hljs-tag .hljs-value,
+pre .hljs-preprocessor,
+pre .hljs-pragma,
+pre .hljs-built_in,
+pre .hljs-javadoc,
+pre .smalltalk .hljs-class,
+pre .smalltalk .hljs-localvars,
+pre .smalltalk .hljs-array,
+pre .css .hljs-rules .hljs-value,
+pre .hljs-attr_selector,
+pre .hljs-pseudo,
+pre .apache .hljs-cbracket,
+pre .tex .hljs-formula,
+pre .coffeescript .hljs-attribute {
+  color: #cc9393;
+}
+
+pre .hljs-shebang,
+pre .diff .hljs-addition,
+pre .hljs-comment,
+pre .hljs-annotation,
+pre .hljs-template_comment,
+pre .hljs-pi,
+pre .hljs-doctype {
+  color: #7f9f7f;
+}
+
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .hljs-formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .hljs-cdata {
+  opacity: 0.5;
+}
+
